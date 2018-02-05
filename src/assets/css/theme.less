@@ -1,0 +1,45 @@
+/**
+ * Created by 熊超超 on 2017/8/4.
+ */
+@import "./vars";
+
+#app {
+  .yd-btn, .yd-btn-block{
+    border-radius: 6px;
+  }
+  .yd-btn.line, .yd-btn-block.line{
+    background-color: @bg-btn-grey;
+  }
+  .yd-btn.line:active, .yd-btn-block.line:active{
+    background-color: darken(@bg-btn-grey, 2%);
+  }
+
+  .yd-btn-primary{
+    background-color: @green;
+  }
+  .yd-btn-primary:active{
+    background-color: darken(@green, 5%)
+  }
+  .yd-btn-primary.line{
+    color: @green;
+    border: 1px solid @green;
+  }
+
+  .yd-btn-warning{
+    background-color: @orange;
+  }
+  .yd-btn-warning:active{
+    background-color: darken(@orange, 5%)
+  }
+  .yd-btn-warning.line{
+    color: @orange;
+    border: 1px solid @orange;
+  }
+
+  .yd-btn-hollow{
+    background-color: @bg-btn-grey;
+  }
+  .yd-btn-hollow:active{
+    background-color: darken(@bg-btn-grey, 2%);
+  }
+}

@@ -1,0 +1,179 @@
+/**
+ * Created by 熊超超 on 2017/8/4.
+ */
+@import "./vars";
+// 图标
+@import '../iconfont/iconfont.css';
+[class^="icon-custom-"]:before, [class*=" icon-custom-"]:before {
+  font-family: 'icon-custom';
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input {
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  touch-action: manipulation;
+}
+
+body, button, select, input, textarea {
+  font-size: 16/@fontScale;
+  background-color: @white;
+}
+
+html, body, #app {
+  height: 100%;
+  color: @black;
+}
+
+.content-view {
+  height: 100%;
+  //background-color: @grey50;
+  > #loading{
+    background-color: transparent;
+  }
+}
+.router-view{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: @bg;
+  min-height: 100vh;
+}
+// 生成从2-100，步进为2的间距样式
+.generate-space(100);
+.generate-space(@n, @i: 0) when (@i =< @n) {
+  .generate-space(@n, (@i + 2));
+  .m-@{i} {
+    margin-left: @i/@rem;
+    margin-right: @i/@rem;
+    margin-top: @i/@rem;
+    margin-bottom: @i/@rem;
+  }
+  .m-v-@{i} {
+    margin-top: @i/@rem;
+    margin-bottom: @i/@rem;
+  }
+  .m-h-@{i} {
+    margin-left: @i/@rem;
+    margin-right: @i/@rem;
+  }
+  .m-t-@{i} {
+    margin-top: @i/@rem;
+  }
+  .m-b-@{i} {
+    margin-bottom: @i/@rem;
+  }
+  .m-l-@{i} {
+    margin-left: @i/@rem;
+  }
+  .m-r-@{i} {
+    margin-right: @i/@rem;
+  }
+  .p-@{i} {
+    padding-left: @i/@rem;
+    padding-right: @i/@rem;
+    padding-top: @i/@rem;
+    padding-bottom: @i/@rem;
+  }
+  .p-v-@{i} {
+    padding-top: @i/@rem;
+    padding-bottom: @i/@rem;
+  }
+  .p-h-@{i} {
+    padding-left: @i/@rem;
+    padding-right: @i/@rem;
+  }
+  .p-t-@{i} {
+    padding-top: @i/@rem;
+  }
+  .p-b-@{i} {
+    padding-bottom: @i/@rem;
+  }
+  .p-l-@{i} {
+    padding-left: @i/@rem;
+  }
+  .p-r-@{i} {
+    padding-right: @i/@rem;
+  }
+}
+// 标题
+.f-title{
+  font-size: 20/@fontScale;
+}
+// 列表及主内容
+.f-con{
+  font-size: 17/@fontScale;
+}
+// 主要描述
+.f-des{
+  font-size: 16/@fontScale;
+}
+// 副标题、次要内容、小标题
+.f-sub{
+  font-size: 14/@fontScale;
+}
+// 辅助信息、弱化内容
+.f-sec{
+  font-size: 13/@fontScale;
+}
+// 版权、底部信息
+.f-min{
+  font-size: 10/@fontScale;
+}
+.c-black{
+  color: @black;
+}
+.c-semi {
+  color: @semi;
+}
+.c-grey{
+  color: @grey;
+}
+.c-light{
+  color: @light;
+}
+.c-white{
+  color: @white;
+}
+.c-green{
+  color: @green;
+}
+.c-orange{
+  color: @orange;
+}
+.c-blue{
+  color: @blue;
+}
+.bg-green{
+  background-color: @bg-green;
+}
+.bg-blue{
+  background-color: @bg-blue;
+}
+.bg-grey{
+  background-color: @bg-grey;
+}
+.f-b{
+  font-weight: bold;
+}
+.b-b {
+  border-bottom: 1Px solid @bg-grey;
+}
+
+.b-t {
+  border-top: 1Px solid @bg-grey;
+}
